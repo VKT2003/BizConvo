@@ -7,7 +7,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: 'https://your-frontend-url.vercel.app', // Update to your actual Vercel frontend
+    origin: 'https://biz-convo-pi.vercel.app', // Update to your actual Vercel frontend
   },
 });
 
@@ -39,3 +39,5 @@ const PORT = process.env.PORT || 9000;
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+module.exports = app;
