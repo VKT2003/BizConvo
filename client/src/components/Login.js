@@ -84,7 +84,7 @@ const Login = () => {
           },
         });
         console.log(response);
-        if (response.statusText === 'OK') {
+        if (response) {
           setVerifying(true); // Set verifying to true after sending OTP
         }
       } catch (error) {
