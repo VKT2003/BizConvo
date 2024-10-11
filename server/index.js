@@ -28,9 +28,7 @@ app.use('/uploads', express.static(path.join(__dirname, '../client/public/upload
 
 // Routes
 
-app.get('/', (req,res)=>{
-  res.json("API IS RUNNING");
-}
+app.get('/', (req, res) => res.send('API running'));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/chat', chatRoutes);
