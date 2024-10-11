@@ -104,7 +104,7 @@ const Register = () => {
           otp: formData.otp,
         });
 
-        console.log(response.data);
+        console.log(response);
 
         if (response.data) {
           // Decode the isVerified JWT token
