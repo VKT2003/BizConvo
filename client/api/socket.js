@@ -14,7 +14,7 @@ export default function handler(req, res) {
   if (!res.socket.server.io) {
     io = new Server(res.socket.server, {
       cors: {
-        origin: 'https://your-vercel-app-url.vercel.app',
+        origin: 'https://biz-convo-pi.vercel.app',
       },
       transports: ['polling'], // Required due to Vercel's limitations on WebSockets
     });
