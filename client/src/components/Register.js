@@ -84,7 +84,7 @@ const Register = () => {
 
         console.log(response.data);
 
-        if (response.statusText === 'OK') {
+        if (response) {
           const res = response.data;
           localStorage.setItem('token', res.token);
           localStorage.removeItem('user');
