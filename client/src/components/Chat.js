@@ -25,7 +25,7 @@ const Chat = () => {
         const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASE_URL}/api/chat/get-messages/${user?._id}/${chatPerson?._id}`);
         if (response.status !== 200) {
           console.error('Error fetching messages:', response);
-          setMessages([]);
+          // setMessages([]);
           return;
         }
         setMessages(response.data.messages);
