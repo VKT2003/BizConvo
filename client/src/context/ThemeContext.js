@@ -6,6 +6,6 @@ export const themes = {
 };
 
 export const ThemeContext = createContext({
-    theme: themes.light, // Default theme
+    theme: themes.dark, // Default theme
     toggleTheme: () => {}, // Default toggle function
 });
