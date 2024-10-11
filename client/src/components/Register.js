@@ -141,7 +141,7 @@ const Register = () => {
   return (
     <div className={`${styles.registerForm} container mt-5`}>
       <div className={`${styles.image}`}>
-        <img src="/formImage.jpg" alt="formImage" />
+        <img src="/formImage.webp" alt="formImage" />
       </div>
       <div className={`${styles.form}`}>
         <form onSubmit={handleRegister}>
