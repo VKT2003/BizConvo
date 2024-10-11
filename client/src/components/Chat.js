@@ -23,24 +23,19 @@ const Chat = () => {
     const fetchMessages = async () => {
       try {
         const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASE_URL}/api/chat/get-messages/${user?._id}/${chatPerson?._id}`);
-        if (response.status !== 200) {
-          console.error('Error fetching messages:', response);
-          // setMessages([]);
-          return;
+        if (response.status === 200) {
+          // Update the messages array by combining current messages and the fetched messages
+          setMessages((prevMessages) => [...prevMessages, ...response.data.messages]);
         }
-        console.log(response);
-        setMessages(response.data.messages);
       } catch (err) {
         console.error('Error fetching messages:', err);
-        setMessages([]);
-        console.log('Messages:', messages);
       }
     };
-
+  
     if (chatPerson?._id) {
       fetchMessages();
     }
-  }, [chatPerson, user, setMessages, message, newMessage, setNewMessage, setChatPerson]);
+  }, [chatPerson, user, newMessage]);
 
   useEffect(() => {
     const fetchConversations = async () => {
