@@ -28,6 +28,7 @@ const Chat = () => {
           // setMessages([]);
           return;
         }
+        console.log(response);
         setMessages(response.data.messages);
       } catch (err) {
         console.error('Error fetching messages:', err);
