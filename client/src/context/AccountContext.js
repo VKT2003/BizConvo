@@ -18,7 +18,7 @@ const AccountProvider = ({ children }) => {
         socket.current = io('https://biz-convo-pi.vercel.app/api/socket', {
   transports: ['polling'],
 });
-
+        console.log(socket?.current);
         socket.current?.on('connect', () => {
             console.log('Connected to server');
         });
