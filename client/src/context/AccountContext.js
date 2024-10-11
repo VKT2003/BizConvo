@@ -15,7 +15,9 @@ const AccountProvider = ({ children }) => {
     const socket = useRef();
 
     useEffect(() => {
-        socket.current = io(process.env.REACT_APP_SOCKET_URI);
+        socket.current = io('https://biz-convo-pi.vercel.app/api/socket', {
+  transports: ['polling'],
+});
 
         socket.current?.on('connect', () => {
             console.log('Connected to server');
