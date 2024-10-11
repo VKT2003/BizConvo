@@ -11,6 +11,10 @@ const io = new Server(server, {
   },
 });
 
+app.get('/',(req,res)=>{
+  res.send('API');
+}
+
 let users = [];
 
 const addUser = (userData, socketId) => {
@@ -40,4 +44,4 @@ server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-module.exports = io;
+module.exports = app;
